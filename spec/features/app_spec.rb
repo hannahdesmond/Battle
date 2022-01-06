@@ -16,3 +16,13 @@ feature 'name submission' do
   end
 end
 
+feature 'hit points' do
+  scenario "see player 2's hit points" do
+    visit('/')
+    fill_in 'player_one_name', with: 'Joy'
+    fill_in 'player_two_name', with: 'Hannah'
+    click_button('Submit')
+    expect(page).to have_content("30HP")
+  end
+end
+
