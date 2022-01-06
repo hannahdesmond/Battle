@@ -7,7 +7,13 @@ class Battle < Sinatra::Base
   end
 
   get '/' do
-    'Testing Infrastructure Working!'
+    erb(:index)
+  end
+
+  post '/names' do
+    @Player_One_Name=params[:Player_One_Name]
+    @Player_Two_Name=params[:Player_Two_Name]
+    erb(:play)
   end
 
   run! if app_file == $0
