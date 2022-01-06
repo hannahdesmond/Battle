@@ -11,8 +11,8 @@ class Battle < Sinatra::Base
   end
 
   post '/names' do
-    @Player_One_Name=params[:Player_One_Name]
-    @Player_Two_Name=params[:Player_Two_Name]
+    @player_one_name=params[:player_one_name]
+    @player_two_name=params[:player_two_name]
     erb(:play)
   end
 
