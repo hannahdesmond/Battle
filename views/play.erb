@@ -5,11 +5,11 @@
 
 <div class="container">
   <div class="child">
-    <p>Player 1: <%= @player_one_name %></p>
+    <p>Player 1: <%= @game.player_one.name %></p>
   </div>
   <div class="child">
-    <p>Player 2: <%= @player_two_name%></p>
-    <p><%= $player_two.hit_points %>HP</p>
+    <p>Player 2: <%= @game.player_two.name%></p>
+    <p><%= @game.player_two.hit_points %>HP</p>
   </div>
 </div>
 

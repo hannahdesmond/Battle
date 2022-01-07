@@ -1,4 +1,4 @@
-<p>Player 1 attacked player 2</p>
+<p><%= @game.player_one.name %> attacked <%= @game.player_two.name %></p>
 <form action="/play" method="get">
   <input type="submit" value="Play More">
 </form>

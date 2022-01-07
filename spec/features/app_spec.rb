@@ -22,7 +22,7 @@ feature 'play' do
   scenario 'can attack player 2 and get confirmation' do
     sign_in_and_play
     click_button("Attack Player 2")
-    expect(page).to have_content("Player 1 attacked player 2")   
+    expect(page).to have_content("Joy attacked Hannah")   
   end
   scenario 'reduce player 2 HP by 10HP' do
     sign_in_and_play
