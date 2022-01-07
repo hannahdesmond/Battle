@@ -1,2 +1,25 @@
-<p>Player 1: <%= @player_one_name %>, Player 2: <%= @player_two_name%></p>
-<p><%@player_two_name%>: 30HP</p>
+<head>
+  <title>Play</title>
+  <link href="<%= url('/styles.css') %>" rel="stylesheet" type="text/css" />
+</head>
+
+<div class="container">
+  <div class="child">
+    <p>Player 1: <%= @player_one_name %></p>
+  </div>
+  <div class="child">
+    <p>Player 2: <%= @player_two_name%></p>
+    <p>30HP</p>
+  </div>
+</div>
+
+<div class="container">
+  <div class="child">
+  <form action="/attacked" method="get">
+    <input type="submit" value="Attack Player 2">
+  </form>
+  </div>
+  <div class="child"></div>
+</div>
+
+

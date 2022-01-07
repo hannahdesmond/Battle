@@ -9,14 +9,25 @@ end
 feature 'name submission' do
   scenario 'players fill in names, seen on screen' do
     sign_in_and_play
-    expect(page).to have_content('Player 1: Joy, Player 2: Hannah')
+    expect(page).to have_content('Joy')
+    expect(page).to have_content('Hannah')
   end
 end
 
-feature 'hit points' do
+feature 'play' do
   scenario "see player 2's hit points" do
     sign_in_and_play
     expect(page).to have_content("30HP")
   end
+  scenario 'can attack player 2 and get confirmation' do
+    sign_in_and_play
+    click_button("Attack Player 2")
+    expect(page).to have_content("Player 1 attacked player 2")   
+    # post route for play to
+    # or new get route to get additional text. Have 
+    # a look a previous routes including cat project.
+  end
 end
+
+
 
