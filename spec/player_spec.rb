@@ -17,18 +17,13 @@ describe Player do
     end
   end
   describe "#receive_damage" do
-    it 'damages the player' do
-      expect(randall).to receive(:receive_damage)
-      susan.attack(randall)
-    end
-  end
-  describe "attack" do
     it 'reduces player 2 HP by 10' do
-      expect { randall.attack(susan) }.to change { susan.hit_points }.by(-10)
+      expect { randall.receive_damage }.to change { randall.hit_points }.by(-10)
     end
     it 'reduces player 1 HP by 10' do
-    expect { susan.attack(randall) }.to change { randall.hit_points }.by(-10)
+    expect { susan.receive_damage }.to change { susan.hit_points }.by(-10)
     end
   end
+  
 
 end
