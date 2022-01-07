@@ -28,7 +28,7 @@ feature 'play' do
     sign_in_and_play
     click_button("Attack Player 2")
     click_button("Play More")
-    expect(page).to have_content("20HP")
+    expect(page).to have_content("50HP")
   end
 end
 
