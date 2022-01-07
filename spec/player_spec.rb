@@ -12,7 +12,10 @@ describe Player do
   it 'Susan has a default HP of 60HP' do
     expect(susan.hit_points).to eq(60)
   end
-  it 'reduces HP by 10' do
-    expect { subject.attack }.to change { subject.hit_points }.by(-10)
+  it 'reduces player 2 HP by 10' do
+    expect { randall.attack }.to change { randall.hit_points }.by(-10)
+  end
+  it 'reduces player 1 HP by 10' do
+    expect { susan.attack }.to change { susan.hit_points }.by(-10)
   end
 end
