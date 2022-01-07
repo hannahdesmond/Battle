@@ -29,7 +29,7 @@ class Battle < Sinatra::Base
   get '/attacked' do
     @player_one_name = $player_one.name
     @player_two_name = $player_two.name
-    Game.new.attack($player_two)
+    Game.new($player_one, $player_two).attack($player_two)
     erb(:attacked)
   end
 
