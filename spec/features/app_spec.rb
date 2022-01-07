@@ -23,9 +23,12 @@ feature 'play' do
     sign_in_and_play
     click_button("Attack Player 2")
     expect(page).to have_content("Player 1 attacked player 2")   
-    # post route for play to
-    # or new get route to get additional text. Have 
-    # a look a previous routes including cat project.
+  end
+  scenario 'reduce player 2 HP by 10HP' do
+    sign_in_and_play
+    click_button("Attack Player 2")
+    click_button("Play More")
+    expect(page).to have_content("20HP")
   end
 end
 

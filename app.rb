@@ -1,6 +1,6 @@
 require 'sinatra/base'
 require 'sinatra/reloader'
-require 'player'
+require_relative './lib/player.rb'
 
 class Battle < Sinatra::Base
   configure :development do
@@ -22,6 +22,9 @@ class Battle < Sinatra::Base
   get '/play' do
     erb(:play)
   end
+
+  # post # hit points
+  # redirect to get attacked?
 
   get '/attacked' do
     erb(:attacked)
